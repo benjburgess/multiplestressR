@@ -21,7 +21,7 @@
 #'
 #
 #'
-#'@return The function returns the critical effect size (for the additive null model)
+#'@return The function returns the critical effect size (for the additive null model; see \code{\link{effect_size_additive}})
 #'for a given experimental design.
 
 #'@examples

@@ -17,7 +17,7 @@
 #
 #'
 #'@return The function returns a dataset containing
-#'i)   the same results as from either the \emph{effect_size_additive} or \emph{effect_size_multiplicative} functions.
+#'i)   the same results as from either the \code{\link{effect_size_additive}} or \code{\link{effect_size_multiplicative}} functions.
 #'
 #'ii)  the classification of any interactions (see below)
 #'
