@@ -1,6 +1,6 @@
 Package: multiplestressR
 Title: Additive and Multiplicative Null Models for Multiple Stressor Data
-Version: 0.0.0.9002
+Version: 0.0.0.9003
 Authors@R: 
     person(given = "Benjamin",
            family = "Burgess",
@@ -8,11 +8,11 @@ Authors@R:
            email = "benjamin.burgess.17@ucl.ac.uk",
            comment = c(ORCID = "0000-0003-0439-0061"))
 Description: An implementation of the additive and multiplicative null models for multiple stressor data.
-    This packages allows users to calculate effect sizes based upon either null model, and hence classify
-    interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the
-    user wishses to analyse data for a single experiment, or for researchers conducting a meta-analysis.
-    The functions require minimal input (or statistical knowledge) with results clearly interpretable 
-    with summary figures also able to be easily generated.
+This packages allows users to calculate effect sizes based upon either null model, and hence classify 
+interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the
+user wishses to analyse data for a single experiment, or for researchers conducting a meta-analysis.
+The functions within this package require minimal input (or statistical knowledge). The output of these functions are easily interpretable,
+with summary figures likewise able to be easily generated.
 Imports: 
     ggplot2,
     patchwork,

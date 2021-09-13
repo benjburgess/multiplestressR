@@ -1,5 +1,5 @@
 
-#'Classify Interactions
+#'Classify Interactions (for either null model)
 #'
 #'Using the output from either the \code{\link{effect_size_additive}} or \code{\link{effect_size_multiplicative}} functions,
 #'interactions can be assigned classifications (e.g., antagonisms or synergisms) based on the frameworks used by

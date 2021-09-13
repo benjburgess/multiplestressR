@@ -1,5 +1,5 @@
 
-#'Calculate Critical Effect Sizes for the Additive Null Model
+#'Critical Effect Sizes (for the additive null model)
 #'
 #'The critical effect size for a given experimental design (i.e., number of replicates per treatment).
 #'
