@@ -11,23 +11,25 @@ summary_plots(
 )
 }
 \arguments{
-\item{effect_size_dataframe}{Output from the \emph{classify_interactions} function.}
+\item{effect_size_dataframe}{Output from the \code{\link{classify_interactions}} function.}
 
 \item{Small_Sample_Correction}{Whether the correction for small sample sizes should be enacted
-(TRUE or FALSE; default is TRUE) \emph{Note that if the multiplicative null model was implemented,
-this parameter is not used and can be ignored. If the additive null model was implemented, then this
+(TRUE or FALSE; default is TRUE) \emph{Note that if the multiplicative null model (see \code{\link{effect_size_multiplicative}})
+was implemented, this parameter is not used and can be ignored.
+If the additive null model (see \code{\link{effect_size_additive}}) was implemented, then this
 parameter should be assigned the same value as in that analysis}.}
 
 \item{Significance_Level}{The value of alpha for which confidence intervals are calculated
-(numeric, between 0 and 1; default is 0.05) \emph{Note that if the multiplicative null model was implemented,
-this parameter is not used and can be ignored. If the additive null model was implemented, then this
+(numeric, between 0 and 1; default is 0.05) \emph{Note that if the multiplicative null model (see \code{\link{effect_size_multiplicative}})
+was implemented, this parameter is not used and can be ignored.
+If the additive null model (see \code{\link{effect_size_additive}}) was implemented, then this
 parameter should be assigned the same value as in that analysis}.}
 }
 \value{
 The function returns a series of figures each of which is outlined above.
 }
 \description{
-Using the output from \emph{classify_interactions} function, summary figures can be created using this function.
+Using the output from \code{\link{classify_interactions}} function, summary figures can be created using this function.
 }
 \details{
 The figures include:
@@ -35,7 +37,8 @@ The figures include:
  a) The proportions of the different interaction classifications from the dataset
 
  b) Median sample sizes plotted against effect size (different interaction classifications are highlighted).
-    Where the additive null model was used in the analysis, lines for critical effect sizes are plotted (see \emph{critical_effect_size_additive} function).
+    Where the additive null model was used in the analysis, lines for critical effect sizes are plotted
+    (see \code{\link{critical_effect_size_additive}} function).
 
  c) Density of different median sample sizes.
 
@@ -58,7 +61,7 @@ df <- data.frame(N_C       = c(3, 5, 4, 4, 8, 8, 6, 8),
                 Mean_B    = c(0.69, 0.73, 0.62, 0.69, 0.77, 0.54, 0.68, 0.53),
                 N_X       = c(3, 5, 4, 4, 8, 8, 6, 8),
                 SD_X      = c(0.08, 0.18, 0.21, 0.10, 0.10, 0.11, 0.13, 0.14),
-                Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.30, 0.48, 0.60, 0.41));
+                Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.50, 0.48, 0.60, 0.41));
 
 #calculating effect sizes
 df <- effect_size_additive(Control_N         = df$N_C,
@@ -73,7 +76,7 @@ df <- effect_size_additive(Control_N         = df$N_C,
                           StressorsAB_N     = df$N_X,
                           StressorsAB_SD    = df$SD_X,
                           StressorsAB_Mean  = df$Mean_X,
-                          Significance_Level = 0.10);
+                          Significance_Level = 0.05);
 
 #classifying interactions
 df <- classify_interactions(effect_size_dataframe = df,

@@ -1,7 +1,7 @@
 
 #'Generate Summary Figures
 #'
-#'Using the output from \code{\link{clasify_interactions}} function, summary figures can be created using this function.
+#'Using the output from \code{\link{classify_interactions}} function, summary figures can be created using this function.
 #'
 #'The figures include:
 #'
@@ -19,7 +19,7 @@
 #'
 #'  Note that c - e) are most useful for researchers conducting a meta-analysis.
 #'
-#'@param effect_size_dataframe     Output from the \code{\link{clasify_interactions}} function.
+#'@param effect_size_dataframe     Output from the \code{\link{classify_interactions}} function.
 #'@param Small_Sample_Correction   Whether the correction for small sample sizes should be enacted
 #'(TRUE or FALSE; default is TRUE) \emph{Note that if the multiplicative null model (see \code{\link{effect_size_multiplicative}})
 #'was implemented, this parameter is not used and can be ignored.

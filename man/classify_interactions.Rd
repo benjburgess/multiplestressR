@@ -2,7 +2,7 @@
 % Please edit documentation in R/classify_interactions.R
 \name{classify_interactions}
 \alias{classify_interactions}
-\title{Classify Interactions}
+\title{Classify Interactions (for either null model)}
 \usage{
 classify_interactions(
   effect_size_dataframe,
@@ -23,7 +23,7 @@ For examples see \emph{Burgess et al. (2021)}; \emph{Jackson et al. (2016)}; \em
 }
 \value{
 The function returns a dataset containing
-i)   the same results as from either the \emph{effect_size_additive} or \emph{effect_size_multiplicative} functions.
+i)   the same results as from either the \code{\link{effect_size_additive}} or \code{\link{effect_size_multiplicative}} functions.
 
 ii)  the classification of any interactions (see below)
 
@@ -125,7 +125,7 @@ df <- data.frame(N_C       = c(3, 5, 4, 4, 8, 8, 6, 8),
                 Mean_B    = c(0.69, 0.73, 0.62, 0.69, 0.77, 0.54, 0.68, 0.53),
                 N_X       = c(3, 5, 4, 4, 8, 8, 6, 8),
                 SD_X      = c(0.08, 0.18, 0.21, 0.10, 0.10, 0.11, 0.13, 0.14),
-                Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.30, 0.48, 0.60, 0.41));
+                Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.50, 0.48, 0.60, 0.41));
 
 #calculating effect sizes
 df <- effect_size_additive(Control_N         = df$N_C,

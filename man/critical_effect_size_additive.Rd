@@ -2,7 +2,7 @@
 % Please edit documentation in R/critical_effect_size_additive.R
 \name{critical_effect_size_additive}
 \alias{critical_effect_size_additive}
-\title{Calculate Critical Effect Sizes for the Additive Null Model}
+\title{Critical Effect Sizes (for the additive null model)}
 \usage{
 critical_effect_size_additive(
   Control_N,
@@ -29,7 +29,7 @@ critical_effect_size_additive(
 (numeric, between 0 and 1; default is 0.05)}
 }
 \value{
-The function returns the critical effect size (for the additive null model)
+The function returns the critical effect size (for the additive null model; see \code{\link{effect_size_additive}})
 for a given experimental design.
 }
 \description{
