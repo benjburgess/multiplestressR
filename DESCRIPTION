@@ -1,6 +1,6 @@
 Package: multiplestressR
 Title: Additive and Multiplicative Null Models for Multiple Stressor Data
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: 
     person(given = "Benjamin",
            family = "Burgess",
