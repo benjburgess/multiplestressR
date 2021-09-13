@@ -7,12 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "benjamin.burgess.17@ucl.ac.uk",
            comment = c(ORCID = "0000-0003-0439-0061"))
-Description: An implementation of the additive and multiplicative null models for multiple stressor data.
-This packages allows users to calculate effect sizes based upon either null model, and hence classify 
-interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the
-user wishses to analyse data for a single experiment, or for researchers conducting a meta-analysis.
-The functions within this package require minimal input (or statistical knowledge). The output of these functions are easily interpretable,
-with summary figures likewise able to be easily generated.
+Description: An implementation of the additive and multiplicative null models for multiple stressor data. This packages allows users to calculate effect sizes based upon either null model, and hence classify interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the user wishses to analyse data for a single experiment, or for researchers conducting a meta-analysis. The functions within this package require minimal input (or statistical knowledge). The output of these functions are easily interpretable, with summary figures likewise able to be easily generated.
 Imports: 
     ggplot2,
     patchwork,
