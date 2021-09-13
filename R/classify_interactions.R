@@ -101,7 +101,38 @@
 #'  \emph{Seifert et al. (2020)}; \emph{Siviter et al. (2021)})
 #'
 #'@examples
-#'classify_interactions(effect_size_dataframe = df,
+#'
+#'#generating example dataframe
+#'df <- data.frame(N_C       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_C      = c(0.05, 0.10, 0.12, 0.19, 0.09, 0.06, 0.07, 0.13),
+#'                 Mean_C    = c(0.90, 0.92, 0.75, 0.86, 0.80, 0.97, 0.94, 0.78),
+#'                 N_A       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_A      = c(0.14, 0.12, 0.16, 0.13, 0.11, 0.11, 0.08, 0.14),
+#'                 Mean_A    = c(0.66, 0.72, 0.71, 0.67, 0.75, 0.50, 0.63, 0.61),
+#'                 N_B       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_B      = c(0.12, 0.08, 0.14, 0.14, 0.12, 0.09, 0.13, 0.19),
+#'                 Mean_B    = c(0.69, 0.73, 0.62, 0.69, 0.77, 0.54, 0.68, 0.53),
+#'                 N_X       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_X      = c(0.08, 0.18, 0.21, 0.10, 0.10, 0.11, 0.13, 0.14),
+#'                 Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.50, 0.48, 0.60, 0.41));
+#'
+#'#calculating effect sizes
+#'df <- effect_size_additive(Control_N         = df$N_C,
+#'                           Control_SD        = df$SD_C,
+#'                           Control_Mean      = df$Mean_C,
+#'                           StressorA_N       = df$N_A,
+#'                           StressorA_SD      = df$SD_A,
+#'                           StressorA_Mean    = df$Mean_A,
+#'                           StressorB_N       = df$N_B,
+#'                           StressorB_SD      = df$SD_B,
+#'                           StressorB_Mean    = df$Mean_B,
+#'                           StressorsAB_N     = df$N_X,
+#'                           StressorsAB_SD    = df$SD_X,
+#'                           StressorsAB_Mean  = df$Mean_X,
+#'                           Significance_Level = 0.05);
+#'
+#'#classifying interactions
+#'df <- classify_interactions(effect_size_dataframe = df,
 #'                    assign_reversals = TRUE,
 #'                    remove_directionality = TRUE)
 #'
@@ -358,8 +389,12 @@ classify_interactions <- function(effect_size_dataframe,
 
   }
 
-  df_MA <- base::subset(df_MA, select = -c(Obs_effect))
-  df_MA <- base::subset(df_MA, select = -c(Exp_effect))
+  drop_columns <- c("Obs_effect", "Exp_effect")
+
+  df_MA <- df_MA[ , !(names(df_MA) %in% drop_columns)]
+
+  #df_MA <- base::subset(df_MA, select = -c(Obs_effect))
+  #df_MA <- base::subset(df_MA, select = -c(Exp_effect))
 
   return(df_MA)
 

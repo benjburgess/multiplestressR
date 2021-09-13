@@ -33,11 +33,43 @@
 #'@return The function returns a series of figures each of which is outlined above.
 
 #'@examples
-#'classify_interactions(effect_size_dataframe = df,
-#'                      Small_Sample_Correction = TRUE,
-#'                      remove_directionality = TRUE)
+#'#generating example dataframe
+#'df <- data.frame(N_C       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_C      = c(0.05, 0.10, 0.12, 0.19, 0.09, 0.06, 0.07, 0.13),
+#'                 Mean_C    = c(0.90, 0.92, 0.75, 0.86, 0.80, 0.97, 0.94, 0.78),
+#'                 N_A       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_A      = c(0.14, 0.12, 0.16, 0.13, 0.11, 0.11, 0.08, 0.14),
+#'                 Mean_A    = c(0.66, 0.72, 0.71, 0.67, 0.75, 0.50, 0.63, 0.61),
+#'                 N_B       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_B      = c(0.12, 0.08, 0.14, 0.14, 0.12, 0.09, 0.13, 0.19),
+#'                 Mean_B    = c(0.69, 0.73, 0.62, 0.69, 0.77, 0.54, 0.68, 0.53),
+#'                 N_X       = c(3, 5, 4, 4, 8, 8, 6, 8),
+#'                 SD_X      = c(0.08, 0.18, 0.21, 0.10, 0.10, 0.11, 0.13, 0.14),
+#'                 Mean_X    = c(0.73, 0.44, 0.58, 0.45, 0.50, 0.48, 0.60, 0.41));
 #'
-#'classify_interactions(effect_size_dataframe = df)
+#'#calculating effect sizes
+#'df <- effect_size_additive(Control_N         = df$N_C,
+#'                           Control_SD        = df$SD_C,
+#'                           Control_Mean      = df$Mean_C,
+#'                           StressorA_N       = df$N_A,
+#'                           StressorA_SD      = df$SD_A,
+#'                           StressorA_Mean    = df$Mean_A,
+#'                           StressorB_N       = df$N_B,
+#'                           StressorB_SD      = df$SD_B,
+#'                           StressorB_Mean    = df$Mean_B,
+#'                           StressorsAB_N     = df$N_X,
+#'                           StressorsAB_SD    = df$SD_X,
+#'                           StressorsAB_Mean  = df$Mean_X,
+#'                           Significance_Level = 0.10);
+#'
+#'#classifying interactions
+#'df <- classify_interactions(effect_size_dataframe = df,
+#'                    assign_reversals = TRUE,
+#'                    remove_directionality = TRUE);
+#'
+#'#generate summary plots
+#'df_plots <- summary_plots(effect_size_dataframe = df,
+#'                    Significance_Level = 0.05)
 #'
 #'@export
 
@@ -46,6 +78,10 @@
 summary_plots <- function(effect_size_dataframe,
                           Small_Sample_Correction = TRUE,
                           Significance_Level = 0.05){
+
+  Sample_Size_Median <- Interaction_Effect_Size <- Interaction_Classification <- NULL
+
+
 
   df_MA <- effect_size_dataframe
 
@@ -151,11 +187,12 @@ summary_plots <- function(effect_size_dataframe,
 
   calculate_median <- function(x1, x2, x3, x4){
 
-    x <- median(x1, x2, x3, x4)
+    x <- stats::median(x1, x2, x3, x4)
     floor(x)
     return(x)
 
   }
+
 
   df_MA$Sample_Size_Median <- mapply(calculate_median,
                                      df_MA$Control_N,
@@ -206,7 +243,7 @@ summary_plots <- function(effect_size_dataframe,
 
   for(i in 1:dim(df_plot1)[1]){
     df_plot1$Proportion[i] <- dim(subset(df_MA,
-                                         Interaction_Classification == df_plot1$Interaction_Classification[i]))[1]/dim(df_MA)[1]
+                                         df_MA$Interaction_Classification == df_plot1$Interaction_Classification[i]))[1]/dim(df_MA)[1]
   }
 
 
@@ -214,9 +251,9 @@ summary_plots <- function(effect_size_dataframe,
 
 
   plot1 <- ggplot2::ggplot(df_plot1,
-                           ggplot2::aes(x=as.factor(Interaction_Classification),
+                           ggplot2::aes(x=as.factor(df_plot1$Interaction_Classification),
                                         y=df_plot1$Proportion,
-                                        fill=as.factor(Interaction_Classification) )) +
+                                        fill=as.factor(df_plot1$Interaction_Classification) )) +
     ggplot2::geom_bar(stat = "identity") +
     ggplot2::scale_fill_manual(values = col_vals) +
     ggplot2::theme_classic() +
@@ -300,7 +337,7 @@ summary_plots <- function(effect_size_dataframe,
       #}
 
 
-      z_v <- qnorm(Significance_Level/2)
+      z_v <- stats::qnorm(Significance_Level/2)
 
 
       if(Small_Sample_Correction == TRUE){
@@ -357,7 +394,7 @@ summary_plots <- function(effect_size_dataframe,
   ##Plot 3 - Median Sample Size Distribution
 
   plot3 <- ggplot2::ggplot(df_MA,
-                           ggplot2::aes(x=Sample_Size_Median)) +
+                           ggplot2::aes(x=df_MA$Sample_Size_Median)) +
     ggplot2::geom_density(alpha=0.2, na.rm = T) +
     ggplot2::ylab("Density") +
     ggplot2::xlab("Sample Size") +
@@ -370,8 +407,8 @@ summary_plots <- function(effect_size_dataframe,
   ##Plot 4 - Effect size to inverse of variance
 
   plot4 <- ggplot2::ggplot(df_MA,
-                           ggplot2::aes(y=1/(Interaction_Variance),
-                                        x=Interaction_Effect_Size)) +
+                           ggplot2::aes(y=1/(df_MA$Interaction_Variance),
+                                        x=df_MA$Interaction_Effect_Size)) +
     ggplot2::geom_point() +
     ggplot2::xlab("Effect Size") +
     ggplot2::ylab("Inverse Variance") +
@@ -386,8 +423,8 @@ summary_plots <- function(effect_size_dataframe,
   df_MA$Interaction_Standard_Error <- sqrt(df_MA$Interaction_Variance)
 
   plot5 <- ggplot2::ggplot(df_MA,
-                           ggplot2::aes(y=Interaction_Standard_Error,
-                                        x=Interaction_Effect_Size)) +
+                           ggplot2::aes(y=df_MA$Interaction_Standard_Error,
+                                        x=df_MA$Interaction_Effect_Size)) +
     ggplot2::geom_point() +
     ggplot2::xlab("Effect Size") +
     ggplot2::ylab("Standard Error") +

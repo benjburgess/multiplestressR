@@ -96,7 +96,7 @@ critical_effect_size_additive <- function(Control_N,
   }
 
 
-  z_v <- qnorm(Significance_Level/2)
+  z_v <- stats::qnorm(Significance_Level/2)
 
 
   if(Small_Sample_Correction == TRUE){
