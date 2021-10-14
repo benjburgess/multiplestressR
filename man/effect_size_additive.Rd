@@ -17,8 +17,8 @@ effect_size_additive(
   StressorsAB_N,
   StressorsAB_SD,
   StressorsAB_Mean,
-  Small_Sample_Correction = TRUE,
-  Significance_Level = 0.05
+  Small_Sample_Correction,
+  Significance_Level
 )
 }
 \arguments{

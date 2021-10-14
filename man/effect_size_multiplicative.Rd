@@ -17,7 +17,7 @@ effect_size_multiplicative(
   StressorsAB_N,
   StressorsAB_SD,
   StressorsAB_Mean,
-  Significance_Level = 0.05
+  Significance_Level
 )
 }
 \arguments{

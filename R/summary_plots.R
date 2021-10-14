@@ -79,8 +79,17 @@
 
 
 summary_plots <- function(effect_size_dataframe,
-                          Small_Sample_Correction = TRUE,
-                          Significance_Level = 0.05){
+                          Small_Sample_Correction,
+                          Significance_Level){
+
+  if(missing(Small_Sample_Correction) == TRUE){
+    Small_Sample_Correction <- TRUE
+  }
+
+  if(missing(Significance_Level) == TRUE){
+    Significance_Level <- 0.05
+  }
+
 
   Sample_Size_Median <- Interaction_Effect_Size <- Interaction_Classification <- NULL
 

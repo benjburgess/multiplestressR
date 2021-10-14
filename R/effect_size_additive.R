@@ -116,11 +116,19 @@ effect_size_additive <- function(Control_N,
                                  StressorsAB_N,
                                  StressorsAB_SD,
                                  StressorsAB_Mean,
-                                 Small_Sample_Correction = TRUE,
-                                 Significance_Level = 0.05){
+                                 Small_Sample_Correction,
+                                 Significance_Level){
 
 
   ### Need some checks here to ensure input data is correct.
+
+  if(missing(Small_Sample_Correction) == TRUE){
+    Small_Sample_Correction <- TRUE
+  }
+
+  if(missing(Significance_Level) == TRUE){
+    Significance_Level <- 0.05
+  }
 
   ### Ensure all N, SD, and Mean are numeric
   booleans_numeric <- c(is.numeric(Control_N) | is.na(Control_N),

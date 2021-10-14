@@ -144,6 +144,15 @@ classify_interactions <- function(effect_size_dataframe,
                                   assign_reversals = TRUE,
                                   remove_directionality = FALSE){
 
+  if(missing(assign_reversals) == TRUE){
+    assign_reversals <- TRUE
+  }
+
+  if(missing(remove_directionality) == TRUE){
+    remove_directionality <- FALSE
+  }
+
+
   df_MA <- effect_size_dataframe
 
   if(is.data.frame(df_MA) != TRUE){

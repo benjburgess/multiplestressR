@@ -9,8 +9,8 @@ critical_effect_size_additive(
   StressorA_N,
   StressorB_N,
   StressorsAB_N,
-  Small_Sample_Correction = TRUE,
-  Significance_Level = 0.05
+  Small_Sample_Correction,
+  Significance_Level
 )
 }
 \arguments{

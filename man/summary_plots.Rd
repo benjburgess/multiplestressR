@@ -6,8 +6,8 @@
 \usage{
 summary_plots(
   effect_size_dataframe,
-  Small_Sample_Correction = TRUE,
-  Significance_Level = 0.05
+  Small_Sample_Correction,
+  Significance_Level
 )
 }
 \arguments{
