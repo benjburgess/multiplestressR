@@ -6,8 +6,8 @@
 \usage{
 classify_interactions(
   effect_size_dataframe,
-  assign_reversals = TRUE,
-  remove_directionality = FALSE
+  assign_reversals,
+  remove_directionality
 )
 }
 \arguments{

@@ -13,7 +13,9 @@ test_that("effect_size_additive works as expected", {
                                     StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH[1],
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
-                                    Significance_Level = 0.05)$Interaction_Effect_Size[1], -0.4949691)
+                                    Significance_Level = 0.05)$Interaction_Effect_Size[1], -0.4949691273)
+
+
 
   expect_equal(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
                                     Control_SD        = multiplestressR::survival$Standard_Deviation_Control[1],
@@ -27,7 +29,7 @@ test_that("effect_size_additive works as expected", {
                                     StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH[1],
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
-                                    Significance_Level = 0.10)$Interaction_CI_Lower[1], -2.040716)
+                                    Significance_Level = 0.10)$Interaction_CI_Lower[1], -2.0407155118)
 
 
   expect_equal(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
@@ -59,7 +61,7 @@ test_that("effect_size_additive works as expected", {
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
                                     Significance_Level = 0.075,
-                                    Small_Sample_Correction = FALSE)$Interaction_Effect_Size[1], -0.528717)
+                                    Small_Sample_Correction = FALSE)$Interaction_Effect_Size[1], -0.5287170223)
 
   expect_equal(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
                                     Control_SD        = multiplestressR::survival$Standard_Deviation_Control[1],
@@ -74,7 +76,7 @@ test_that("effect_size_additive works as expected", {
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
                                     Significance_Level = 0.01,
-                                    Small_Sample_Correction = FALSE)$Interaction_CI_Upper[1], 2.058339)
+                                    Small_Sample_Correction = FALSE)$Interaction_CI_Upper[1], 2.0583386246)
 
 
   expect_equal(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
@@ -106,7 +108,7 @@ test_that("effect_size_multiplicative works as expected", {
                                     StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH[1],
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
-                                    Significance_Level = 0.05)$Interaction_Effect_Size[1], -0.07050078)
+                                    Significance_Level = 0.05)$Interaction_Effect_Size[1], -0.0705007812)
 
   expect_equal(effect_size_multiplicative(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
                                     Control_SD        = multiplestressR::survival$Standard_Deviation_Control[1],
@@ -120,7 +122,7 @@ test_that("effect_size_multiplicative works as expected", {
                                     StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH[1],
                                     StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH[1],
                                     StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH[1],
-                                    Significance_Level = 0.05)$Interaction_CI_Lower[1], -0.2353033)
+                                    Significance_Level = 0.05)$Interaction_CI_Lower[1], -0.2353032640)
 
 
   expect_equal(effect_size_multiplicative(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
@@ -142,14 +144,14 @@ test_that("critical_effect_size_additive works as expected", {
   expect_equal(critical_effect_size_additive(Control_N     = 4,
                               StressorA_N   = 4,
                               StressorB_N   = 4,
-                              StressorsAB_N = 4), 1.939734)
+                              StressorsAB_N = 4), 1.9397344512)
 
   expect_equal(critical_effect_size_additive(Control_N     = 3,
                               StressorA_N   = 3,
                               StressorB_N   = 3,
                               StressorsAB_N = 3,
                               Small_Sample_Correction = FALSE,
-                              Significance_Level = 0.10), 2.016364)
+                              Significance_Level = 0.10), 2.0163641416)
 
 
   expect_equal(critical_effect_size_additive(Control_N     = 46,
@@ -157,7 +159,7 @@ test_that("critical_effect_size_additive works as expected", {
                               StressorB_N   = 73,
                               StressorsAB_N = 4,
                               Small_Sample_Correction = TRUE,
-                              Significance_Level = 0.50), 0.3850782)
+                              Significance_Level = 0.50), 0.3850781858)
 })
 
 test_that("classify_interactions works as expected", {
