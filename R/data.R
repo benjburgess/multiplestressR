@@ -1,8 +1,8 @@
 #' Survival data for 250 populations exposed to the stressors of temperature and pH.
 #'
 #' A generated dataset on the survival rates of 250 populations (each composed of 100 individuals) exposed to the stressors of temperature and pH.
-#' The dataset uses a factorial design comprising four treatments (i. Control conditions, ii. Exposed to temperature,
-#' iii. Exposed to pH, iV. Exposed to both temperature and pH). This generated dataset is used in the examples for each function in the multiplestressR package.
+#' The dataset uses a factorial design comprising four treatments: i) Control conditions; ii) Exposed to temperature;
+#' iii) Exposed to pH; iv) Exposed to both temperature and pH. This generated dataset is used in the examples for each function in the multiplestressR package.
 #' Please note that this is a generated dataset and does not reflect data from actual ecological experiments.
 #'
 #' @format A data frame with 250 rows and 12 variables:
