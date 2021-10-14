@@ -254,9 +254,9 @@ summary_plots <- function(effect_size_dataframe,
 
 
   plot1 <- ggplot2::ggplot(df_plot1,
-                           ggplot2::aes(x=as.factor(df_plot1$Interaction_Classification),
-                                        y=df_plot1$Proportion,
-                                        fill=as.factor(df_plot1$Interaction_Classification) )) +
+                           ggplot2::aes(x=as.factor(Interaction_Classification),
+                                        y=Proportion,
+                                        fill=as.factor(Interaction_Classification) )) +
     ggplot2::geom_bar(stat = "identity") +
     ggplot2::scale_fill_manual(values = col_vals) +
     ggplot2::theme_classic() +
@@ -426,8 +426,8 @@ summary_plots <- function(effect_size_dataframe,
   df_MA$Interaction_Standard_Error <- sqrt(df_MA$Interaction_Variance)
 
   plot5 <- ggplot2::ggplot(df_MA,
-                           ggplot2::aes(y=df_MA$Interaction_Standard_Error,
-                                        x=df_MA$Interaction_Effect_Size)) +
+                           ggplot2::aes(y=Interaction_Standard_Error,
+                                        x=Interaction_Effect_Size)) +
     ggplot2::geom_point() +
     ggplot2::xlab("Effect Size") +
     ggplot2::ylab("Standard Error") +
