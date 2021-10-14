@@ -111,10 +111,6 @@ effect_size_multiplicative <- function(Control_N,
   ### Need some checks here to ensure input data is correct.
 
 
-  if(missing(Significance_Level) == TRUE){
-    Significance_Level <- 0.05
-  }
-
   ### Ensure all N, SD, and Mean are numeric
   booleans_numeric <- c(is.numeric(Control_N) | is.na(Control_N),
                         is.numeric(Control_SD) | is.na(Control_SD),

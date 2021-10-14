@@ -141,8 +141,8 @@
 
 
 classify_interactions <- function(effect_size_dataframe,
-                                  assign_reversals = TRUE,
-                                  remove_directionality = FALSE){
+                                  assign_reversals,
+                                  remove_directionality){
 
   if(missing(assign_reversals) == TRUE){
     assign_reversals <- TRUE
@@ -374,7 +374,8 @@ classify_interactions <- function(effect_size_dataframe,
       return(int_class)
     }
 
-    df_AA$Int_Class <- mapply(rev_to_ant(df_AA$Int_Class))
+
+    df_AA$Int_Class <- mapply(rev_to_ant, df_AA$Int_Class)
 
   }
 
