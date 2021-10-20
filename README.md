@@ -13,8 +13,12 @@ The package can be used to calculate either the additive or multiplicative null 
 
 At present the package can be accessed from github using the following code:
 
-``
+`
 library(devtools)
+`
+`
 install_github("benjburgess/multiplestressR")
+`
+`
 library(multiplestressR)
-``
+`
