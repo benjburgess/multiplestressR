@@ -211,7 +211,7 @@ test_that("classify_interactions works as expected", {
                                      assign_reversals = TRUE,
                                      remove_directionality = TRUE)$Interaction_Classification[1], "Null")
 
-  expect_equal(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
+  expect_equal(classify_interactions(effect_size_multiplicative(Control_N         = multiplestressR::survival$Sample_Size_Control[1],
                                                           Control_SD        = multiplestressR::survival$Standard_Deviation_Control[1],
                                                           Control_Mean      = multiplestressR::survival$Mean_Control[1],
                                                           StressorA_N       = multiplestressR::survival$Sample_Size_Temperature[1],
@@ -303,7 +303,7 @@ test_that("summary_plots works as expected", {
                              Significance_Level = 0.05)[[4]]$labels$y, "Inverse Variance")
 
 
-  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+  expect_equal(summary_plots(classify_interactions(effect_size_multiplicative(Control_N         = multiplestressR::survival$Sample_Size_Control,
                                                                         Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
                                                                         Control_Mean      = multiplestressR::survival$Mean_Control,
                                                                         StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
