@@ -1,12 +1,14 @@
 # multiplestressR
 
+For a detailed description of the multiplestressR package, see [this website](https://benjburgess.github.io/multiplestressR/).
+
 ## Aims of the package
 
 The multiplestressR package, is aimed at researchers primarily working in multiple stressor ecology, to easily implement either the additive or multiplicative null models. These null model can be applied to the researcher's own primary data, or for data collated from multiple sources as part of a larger project (e.g., a meta-analyses). 
 
 The package can be used to calculate either the additive or multiplicative null models, which correspond to the factorial forms of Hedges' d or the response ratio respectively. Furthermore, the multiplestressR package is capable of classifying interactions base upon a commonly implemented framework.
 
-The multiplestressR package does not require researchers to have a firm understanding of the statistics of these null models. Instead, the user simply needs to specify the input data and the entire analysis will be conducted. As such, the multiplestressR package provides an outlet which allows researchers to implement a consistent, standardised, and statistically rigourous method for classifying stressor interactions across different analyses.
+The multiplestressR package does not require researchers to have a firm understanding of the statistics of these null models. Instead, the user simply needs to specify the input data and the entire analysis will be conducted. As such, the multiplestressR package provides an outlet which allows researchers to implement a consistent, standardised, and statistically rigorous method for classifying stressor interactions across different analyses.
 
 ## Accessing the package
 
@@ -124,7 +126,7 @@ The summary plots can be generated using the following code:
 
 ## Summary
 
-This is a very simple outline of a potential workflow for the multiplestressR package. For a more complex workthrough of the multiplestressR package see [this tutorial](https://benjburgess.github.io/i/multiplestressR1). Likewise, the documentation for each of the functions details the various options and parameters which can be specified.
+This is a very simple outline of a potential workflow for the multiplestressR package. For a more complex example of the multiplestressR package see [this tutorial](https://benjburgess.github.io/i/multiplestressR1). Likewise, the documentation for each of the functions details the various options and parameters which can be specified.
 
 
 

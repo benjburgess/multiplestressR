@@ -38,7 +38,7 @@
 #'
 #'  ii.  effect size variances
 #'
-#'  iii. upper and lowerconfidences intervals
+#'  iii. upper and lower confidences intervals
 #'
 #'  iv.  user specified numeric parameters
 #'
