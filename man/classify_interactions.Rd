@@ -37,7 +37,7 @@ For ii), interactions are classified in the following method.
 
  a) if the confidence intervals for any effect size overlap zero then the interaction is assigned a \emph{null} classification.
 
- This is analagous to the classification of \emph{additive} which other studies (e.g., \emph{Jackson et al. (2016)}) may use.
+ This is analogous to the classification of \emph{additive} which other studies (e.g., \emph{Jackson et al. (2016)}) may use.
 
  Note that this is given precedence over the process described in b).
 
@@ -145,7 +145,7 @@ Jackson, M. C., Loewen, C. J., Vinebrooke, R. D., & Chimimba, C. T. (2016). Net 
 
 Orr, J. A., Vinebrooke, R. D., Jackson, M. C., Kroeker, K. J., Kordas, R. L., Mantyka-Pringle, C., ... & Piggott, J. J. (2020). Towards a unified study of multiple stressors: divisions and common goals across research disciplines. \emph{Proceedings of the Royal Society B}, 287(1926), 20200421.
 
-Seifert, M., Rost, B., Trimborn, S., & Hauck, J. (2020). Meta-analysis of multiple driver effects on marine phytoplannkton highlights modulating role of pCO2. \emph{Global Change Biology}, 26(12), 6787-6804.
+Seifert, M., Rost, B., Trimborn, S., & Hauck, J. (2020). Meta-analysis of multiple driver effects on marine phytoplankton highlights modulating role of pCO2. \emph{Global Change Biology}, 26(12), 6787-6804.
 
 Siviter, H., Bailes, E. J., Martin, C. D., Oliver, T. R., Koricheva, J., Leadbeater, E., & Brown, M. J. (2021). Agrochemicals interact synergistically to increase bee mortality. \emph{Nature}, 596(7872), 389-392.
 }

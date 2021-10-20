@@ -227,3 +227,97 @@ test_that("classify_interactions works as expected", {
                                      assign_reversals = FALSE,
                                      remove_directionality = FALSE)$Interaction_Classification[1], "Null")
 })
+
+
+test_that("summary_plots works as expected", {
+
+  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+                                                          Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
+                                                          Control_Mean      = multiplestressR::survival$Mean_Control,
+                                                          StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
+                                                          StressorA_SD      = multiplestressR::survival$Standard_Deviation_Temperature,
+                                                          StressorA_Mean    = multiplestressR::survival$Mean_Temperature,
+                                                          StressorB_N       = multiplestressR::survival$Sample_Size_pH,
+                                                          StressorB_SD      = multiplestressR::survival$Standard_Deviation_pH,
+                                                          StressorB_Mean    = multiplestressR::survival$Mean_pH,
+                                                          StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH,
+                                                          StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH,
+                                                          StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH,
+                                                          Significance_Level = 0.05),
+                                     assign_reversals = TRUE,
+                                     remove_directionality = FALSE),
+                             Significance_Level = 0.05)[[1]]$data[1,3], 0.764)
+
+  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+                                                                        Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
+                                                                        Control_Mean      = multiplestressR::survival$Mean_Control,
+                                                                        StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
+                                                                        StressorA_SD      = multiplestressR::survival$Standard_Deviation_Temperature,
+                                                                        StressorA_Mean    = multiplestressR::survival$Mean_Temperature,
+                                                                        StressorB_N       = multiplestressR::survival$Sample_Size_pH,
+                                                                        StressorB_SD      = multiplestressR::survival$Standard_Deviation_pH,
+                                                                        StressorB_Mean    = multiplestressR::survival$Mean_pH,
+                                                                        StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH,
+                                                                        StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH,
+                                                                        StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH,
+                                                                        Significance_Level = 0.05),
+                                                   assign_reversals = TRUE,
+                                                   remove_directionality = FALSE),
+                             Significance_Level = 0.05)[[2]]$data$Sample_Size_Median[123], 6)
+
+
+  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+                                                                        Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
+                                                                        Control_Mean      = multiplestressR::survival$Mean_Control,
+                                                                        StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
+                                                                        StressorA_SD      = multiplestressR::survival$Standard_Deviation_Temperature,
+                                                                        StressorA_Mean    = multiplestressR::survival$Mean_Temperature,
+                                                                        StressorB_N       = multiplestressR::survival$Sample_Size_pH,
+                                                                        StressorB_SD      = multiplestressR::survival$Standard_Deviation_pH,
+                                                                        StressorB_Mean    = multiplestressR::survival$Mean_pH,
+                                                                        StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH,
+                                                                        StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH,
+                                                                        StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH,
+                                                                        Significance_Level = 0.05),
+                                                   assign_reversals = TRUE,
+                                                   remove_directionality = FALSE),
+                             Significance_Level = 0.05)[[3]]$labels$y, "Density")
+
+
+
+  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+                                                                        Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
+                                                                        Control_Mean      = multiplestressR::survival$Mean_Control,
+                                                                        StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
+                                                                        StressorA_SD      = multiplestressR::survival$Standard_Deviation_Temperature,
+                                                                        StressorA_Mean    = multiplestressR::survival$Mean_Temperature,
+                                                                        StressorB_N       = multiplestressR::survival$Sample_Size_pH,
+                                                                        StressorB_SD      = multiplestressR::survival$Standard_Deviation_pH,
+                                                                        StressorB_Mean    = multiplestressR::survival$Mean_pH,
+                                                                        StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH,
+                                                                        StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH,
+                                                                        StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH,
+                                                                        Significance_Level = 0.05),
+                                                   assign_reversals = TRUE,
+                                                   remove_directionality = FALSE),
+                             Significance_Level = 0.05)[[4]]$labels$y, "Inverse Variance")
+
+
+  expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
+                                                                        Control_SD        = multiplestressR::survival$Standard_Deviation_Control,
+                                                                        Control_Mean      = multiplestressR::survival$Mean_Control,
+                                                                        StressorA_N       = multiplestressR::survival$Sample_Size_Temperature,
+                                                                        StressorA_SD      = multiplestressR::survival$Standard_Deviation_Temperature,
+                                                                        StressorA_Mean    = multiplestressR::survival$Mean_Temperature,
+                                                                        StressorB_N       = multiplestressR::survival$Sample_Size_pH,
+                                                                        StressorB_SD      = multiplestressR::survival$Standard_Deviation_pH,
+                                                                        StressorB_Mean    = multiplestressR::survival$Mean_pH,
+                                                                        StressorsAB_N     = multiplestressR::survival$Sample_Size_Temperature_pH,
+                                                                        StressorsAB_SD    = multiplestressR::survival$Standard_Deviation_Temperature_pH,
+                                                                        StressorsAB_Mean  = multiplestressR::survival$Mean_Temperature_pH,
+                                                                        Significance_Level = 0.05),
+                                                   assign_reversals = TRUE,
+                                                   remove_directionality = FALSE),
+                             Significance_Level = 0.05)[[5]]$labels$y, "Standard Error")
+
+})
