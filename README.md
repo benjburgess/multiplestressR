@@ -56,28 +56,49 @@ The additive null model can be calculated using the following code:
 `
 df2 <- effect_size_additive(Control_N         = df$Sample_Size_Control,
 `
+
 `                            
 Control_SD        = df$Standard_Deviation_Control,
 `
-`Control_Mean      = df$Mean_Control,
+
 `
-`StressorA_N       = df$Sample_Size_Temperature,
+Control_Mean      = df$Mean_Control,
 `
-`StressorA_SD      = df$Standard_Deviation_Temperature,
+
 `
-`StressorA_Mean    = df$Mean_Temperature,
+StressorA_N       = df$Sample_Size_Temperature,
 `
-`StressorB_N       = df$Sample_Size_pH,
+
 `
-`StressorB_SD      = df$Standard_Deviation_pH,
+StressorA_SD      = df$Standard_Deviation_Temperature,
 `
-`StressorB_Mean    = df$Mean_pH,
+
 `
-`StressorsAB_N     = df$Sample_Size_Temperature_pH,
+StressorA_Mean    = df$Mean_Temperature,
 `
-`StressorsAB_SD    = df$Standard_Deviation_Temperature_pH,
+
 `
-`StressorsAB_Mean  = df$Mean_Temperature_pH)
+StressorB_N       = df$Sample_Size_pH,
+`
+
+`
+StressorB_SD      = df$Standard_Deviation_pH,
+`
+
+`
+StressorB_Mean    = df$Mean_pH,
+`
+
+`
+StressorsAB_N     = df$Sample_Size_Temperature_pH,
+`
+
+`
+StressorsAB_SD    = df$Standard_Deviation_Temperature_pH,
+`
+
+`
+StressorsAB_Mean  = df$Mean_Temperature_pH)
 `
 
 Here, the `effect_size_additive function` is used to calculate the additive null model for the example dataset. Note that the different parameter values (i.e., treatments, sample sizes, means and SDs) have to be specified by the user. 
