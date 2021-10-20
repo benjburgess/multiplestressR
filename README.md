@@ -15,12 +15,8 @@ At present the package can be accessed from github using the following code:
 
 `
 library(devtools)
-<br>
-install_github("benjburgess/multiplestressR")
-<br>
-library(multiplestressR)
 `
-<br>
+
 `
 install_github("benjburgess/multiplestressR")
 `
@@ -28,3 +24,5 @@ install_github("benjburgess/multiplestressR")
 `
 library(multiplestressR)
 `
+
+
