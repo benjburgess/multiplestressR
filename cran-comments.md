@@ -9,5 +9,5 @@
 
 * This is a new release.
 
-* Several words were flagged as potentially be spelt incorrectly. These were either ecological terms (i.e., "Stressor")
-* or author names (i.e., "Gurevitch" or "Lajeunesse")
+* Several words were flagged as potentially being spelt incorrectly in the DESCRIPTION file. 
+* These were either ecological terms (i.e., "Stressor") or author names (i.e., "Gurevitch" or "Lajeunesse").
