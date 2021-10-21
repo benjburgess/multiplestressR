@@ -228,7 +228,6 @@ test_that("classify_interactions works as expected", {
                                      remove_directionality = FALSE)$Interaction_Classification[1], "Null")
 })
 
-
 test_that("summary_plots works as expected", {
 
   expect_equal(summary_plots(classify_interactions(effect_size_additive(Control_N         = multiplestressR::survival$Sample_Size_Control,
