@@ -6,3 +6,4 @@
 ^\.Rhistory
 ^\.gitattributes
 ^\.gitignore
+^CRAN-RELEASE$
