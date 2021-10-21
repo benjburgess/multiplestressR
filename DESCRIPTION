@@ -8,7 +8,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "benjamin.joshua.burgess@gmail.com",
            comment = c(ORCID = "0000-0003-0439-0061"))
-Description: An implementation of the additive and multiplicative null models. This packages allows users to calculate effect sizes based upon either null model, and hence classify interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the user wishes to analyse data for a single experiment, or for researchers conducting a meta-analysis. The functions within this package require minimal input (or statistical knowledge). The output of these functions is easily understood, with summary figures likewise able to be easily generated.
+Description: An implementation of the additive (Gurevitch et al., 2000 <doi:10.1086/303337>) and multiplicative (Lajeunesse, 2011 <doi:10.1890/11-0423.1>) factorial null models. This packages allows users to calculate effect sizes based upon either null model, and hence classify interactions (e.g., antagonistic or synergistic interactions). This package is appropriate where the user wishes to analyse data for a single experiment, or for researchers conducting a meta-analysis. The functions within this package require minimal input (or statistical knowledge). The output of these functions is easily understood, with summary figures likewise able to be easily generated.
 URL:
     https://benjburgess.github.io/multiplestressR/
 Imports: 

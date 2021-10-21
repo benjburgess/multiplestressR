@@ -43,7 +43,7 @@
 #'  iv.  user specified numeric parameters
 #'
 #'The equations used to calculate effect sizes, effect size variances, and confidence intervals
-#'are described in \emph{Burgess et al. (2021)}.
+#'are described in \emph{Burgess et al. (2021b)}.
 #'
 #'Note that the parameter \emph{Small_Sample_Correction} determines whether the correction for sample
 #'sizes is to be used within the function. This correction (see \emph{Borenstein et al. (2009)}) tends towards 1
@@ -90,7 +90,7 @@
 #'
 #'Borenstein, M., Cooper, H., Hedges, L., & Valentine, J. (2009). Effect sizes for continuous data. \emph{The Handbook of Research Synthesis and Meta-Analysis}, 2, 221-235.
 #'
-#'Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
+#'Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021b). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
 #'
 #'Gurevitch, J., Morrison, J. A., & Hedges, L. V. (2000). The interaction between competition and predation: a meta-analysis of field experiments. \emph{The American Naturalist}, 155(4), 435-453.
 #'
@@ -223,9 +223,6 @@ effect_size_additive <- function(Control_N,
                                    D_B,
                                    D_I){
 
-    #Gurevitch et al., 2000 - refer to this as pooled sampling variance whereas in Cooper, Hedges, Valentine, 2009 it is pooled sampling standard deviation
-    #same equation either way
-    #equation from Gurevitch 2000 used
 
     numerator <- ((N_C)*(S_C)*(S_C) + (N_A)*(S_A)*(S_A) + (N_B)*(S_B)*(S_B) + (N_I)*(S_I)*(S_I))
 
