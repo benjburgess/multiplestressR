@@ -56,5 +56,5 @@ critical_effect_size_additive(Control_N     = 3,
 
 }
 \references{
-Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
+Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021b). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
 }

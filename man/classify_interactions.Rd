@@ -14,11 +14,10 @@ classify_interactions(
 \item{effect_size_dataframe}{Output from either the \code{\link{effect_size_additive}} or \code{\link{effect_size_multiplicative}} functions.}
 
 \item{assign_reversals}{Specify whether reversals should be distinguished from antagonisms (see \emph{Jackson et al. (2016)}
-or \emph{Orr et al. (2020)}) (TRUE or FALSE; default = TRUE)}
+(TRUE or FALSE; default = TRUE)}
 
 \item{remove_directionality}{Specify whether directionality should be removed from the effect sizes.
 This is most pertinent where subsequent analyses will involve conducting a formal meta-analysis (set value to TRUE).
-For examples see \emph{Burgess et al. (2021)}; \emph{Jackson et al. (2016)}; \emph{Seifert et al. (2020)}; \emph{Siviter et al. (2021)}
 (TRUE or FALSE; default = FALSE)}
 }
 \value{
@@ -102,14 +101,12 @@ For ii), interactions are classified in the following method.
 
  Confidence intervals for these altered effect sizes are likewise updated.
 
- This method is most likely required for meta-analyses having previously been implemented in
- several previous analyses (see \emph{Burgess et al. (2021)}; \emph{Jackson et al. (2016)};
- \emph{Seifert et al. (2020)}; \emph{Siviter et al. (2021)})
+ The remove of directionality is only likely to be of concern for meta-analyses.
 }
 \description{
 Using the output from either the \code{\link{effect_size_additive}} or \code{\link{effect_size_multiplicative}} functions,
 interactions can be assigned classifications (e.g., antagonisms or synergisms) based on the frameworks used by
-\emph{Burgess et al. (2021)}, \emph{Jackson et al. (2016)}, or \emph{Orr et al. (2020)}.
+\emph{Burgess et al. (2021)}, or \emph{Jackson et al. (2016)}.
 }
 \examples{
 
@@ -139,13 +136,7 @@ df <- classify_interactions(effect_size_dataframe = df,
 
 }
 \references{
-Burgess, B. J., Purves, D., Mace, G., & Murrell, D. J. (2021). Classifying ecosystem stressor interactions: Theory highlights the data limitations of the additive null model and the difficulty in revealing ecological surprises. \emph{Global Change Biology}.
+Burgess, B. J., Purves, D., Mace, G., & Murrell, D. J. (2021a). Classifying ecosystem stressor interactions: Theory highlights the data limitations of the additive null model and the difficulty in revealing ecological surprises. \emph{Global Change Biology}.
 
 Jackson, M. C., Loewen, C. J., Vinebrooke, R. D., & Chimimba, C. T. (2016). Net effects of multiple stressors in freshwater ecosystems: a meta-analysis. \emph{Global Change Biology}, 22(1), 180-189.
-
-Orr, J. A., Vinebrooke, R. D., Jackson, M. C., Kroeker, K. J., Kordas, R. L., Mantyka-Pringle, C., ... & Piggott, J. J. (2020). Towards a unified study of multiple stressors: divisions and common goals across research disciplines. \emph{Proceedings of the Royal Society B}, 287(1926), 20200421.
-
-Seifert, M., Rost, B., Trimborn, S., & Hauck, J. (2020). Meta-analysis of multiple driver effects on marine phytoplankton highlights modulating role of pCO2. \emph{Global Change Biology}, 26(12), 6787-6804.
-
-Siviter, H., Bailes, E. J., Martin, C. D., Oliver, T. R., Koricheva, J., Leadbeater, E., & Brown, M. J. (2021). Agrochemicals interact synergistically to increase bee mortality. \emph{Nature}, 596(7872), 389-392.
 }
