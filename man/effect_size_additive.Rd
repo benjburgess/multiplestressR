@@ -64,7 +64,7 @@ The function returns a dataframe containing
  iv.  user specified numeric parameters
 
 The equations used to calculate effect sizes, effect size variances, and confidence intervals
-are described in \emph{Burgess et al. (2021b)}.
+are described in \emph{Burgess et al. (2021)}.
 
 Note that the parameter \emph{Small_Sample_Correction} determines whether the correction for sample
 sizes is to be used within the function. This correction (see \emph{Borenstein et al. (2009)}) tends towards 1
@@ -119,7 +119,7 @@ df <- effect_size_additive(Control_N         = df$Sample_Size_Control,
 \references{
 Borenstein, M., Cooper, H., Hedges, L., & Valentine, J. (2009). Effect sizes for continuous data. \emph{The Handbook of Research Synthesis and Meta-Analysis}, 2, 221-235.
 
-Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021b). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
+Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
 
 Gurevitch, J., Morrison, J. A., & Hedges, L. V. (2000). The interaction between competition and predation: a meta-analysis of field experiments. \emph{The American Naturalist}, 155(4), 435-453.
 }

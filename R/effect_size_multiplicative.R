@@ -40,7 +40,7 @@
 #'  iv.  user specified numeric parameters
 #'
 #'The equations used to calculate effect sizes, effect size variances, and confidence intervals
-#'are described in \emph{Burgess et al. (2021b)}.
+#'are described in \emph{Burgess et al. (2021)}.
 #'
 #'
 #'
@@ -85,7 +85,7 @@
 #'
 #'@references
 #'
-#'Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021b). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
+#'Burgess, B. J., Jackson, M. C., & Murrell, D. J. (2021). Multiple stressor null models frequently fail to detect most interactions due to low statistical power. \emph{bioRxiv}.
 #'
 #'Lajeunesse, M. J. (2011). On the meta-analysis of response ratios for studies with correlated and multi-group designs. \emph{Ecology}, 92(11), 2049-2055.
 #'

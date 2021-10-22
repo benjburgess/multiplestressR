@@ -136,7 +136,7 @@ df <- classify_interactions(effect_size_dataframe = df,
 
 }
 \references{
-Burgess, B. J., Purves, D., Mace, G., & Murrell, D. J. (2021a). Classifying ecosystem stressor interactions: Theory highlights the data limitations of the additive null model and the difficulty in revealing ecological surprises. \emph{Global Change Biology}.
+Burgess, B. J., Purves, D., Mace, G., & Murrell, D. J. (2021). Classifying ecosystem stressor interactions: Theory highlights the data limitations of the additive null model and the difficulty in revealing ecological surprises. \emph{Global Change Biology}.
 
 Jackson, M. C., Loewen, C. J., Vinebrooke, R. D., & Chimimba, C. T. (2016). Net effects of multiple stressors in freshwater ecosystems: a meta-analysis. \emph{Global Change Biology}, 22(1), 180-189.
 }
